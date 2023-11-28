@@ -49,9 +49,9 @@ server.get("/itc505/lab7/story", (req, res) => {
 // The server uses port 80 by default unless you start it with the extra
 // command line argument 'local' like this:
 //       node server.js local
-let port = 80;
+let port = 3033;
 if (process.argv[2] === "local") {
-  port = process.env.PORT || 8080;
+  port = process.env.PORT || 3033;
 }
 
 server.listen(port, () => console.log("Ready on localhost!"));
