@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Addendum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </link>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .bg-stripes {
+            background-image: repeating-linear-gradient(45deg,
+                    #4b4b7c,
+                    #4b4b7c 10px,
+                    #444474 10px,
+                    #444474 20px);
+        }
+    </style>
+</head>
+
+<body class="bg-stripes flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-1/2">
+        <div class="mt-4">
+            <p  class="text-lg text-gray-800">
+                <ul class="p-4 list-disc">
+                    <li>
+                        <p>Firstly the total UI was inspired by the website Madlib itself, using TailwindCSS for styling.</p>
+                    </li>
+                    <li>
+                        <p>The structure of the website starts by hosting <code>index.html</code> at route <code>itc505/lab7</code>.</p>
+                    </li>
+                    <li>
+                        <p>Upon opening the site, a list of 3 stories is displayed for user interaction, along with an "Addendum" button
+                            on the right side.</p>
+                    </li>
+                    <li>
+                        <p>Clicking on any story navigates the user to the input page, prompting for 6 inputs. Labels for each input
+                            change dynamically based on the selected story.</p>
+                    </li>
+                    <li>
+                        <p>The logic involves passing the URL parameter (game name) from the index to the input page to retrieve the
+                            game name and display the corresponding label names.</p>
+                    </li>
+                    <li>
+                        <p>Upon clicking the "Go Mad" button on the input page, all inputs and the game name are stored in a JSON named
+                            "data".</p>
+                    </li>
+                    <li>
+                        <p>Using <code>fetch</code>, the JSON data is shared with <code>server.js</code>, with error handling in place
+                            for data sharing failures.</p>
+                    </li>
+                    <li>
+                        <p>In <code>server.js</code>, <code>express.json()</code> is used to handle JSON, retrieving all inputs and the
+                            game name from the POST request.</p>
+                    </li>
+                    <li>
+                        <p>Later, if-else statements separate the stories using the game name, and the inputs are incorporated into
+                            stories using string interpolation.</p>
+                    </li>
+                    <li>
+                        <p>The data is passed to the story page using <code>redirectUrl</code> with <code>encodeURIComponent</code> of
+                            the story itself. The story HTML page decodes the story from the URL parameter using
+                            <code>decodeURIComponent</code>.</p>
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

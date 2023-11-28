@@ -25,10 +25,10 @@ server.post("/itc505/lab7", (req, res) => {
     story = ` Amidst the bustling ${input1}, where the ${input2} rain meets the eager streets, a lone wanderer ${input3} with purpose. From the towering peaks of ${input4} to the tranquil shores of ${input4}, this intrepid soul seeks solace in the embrace of ${input5} landscapes. With each step, the traveler uncovers tales of ${input6} and encounters with ${input1} that weave into the fabric of their journey.
 `;
   } else if (Game === "Romantic-Turmoil") {
-    story = ` The name of the game is ${Game} Once upon a time, in a land of ${input1}, there lived a ${input2} ${input3}. This ${input3} had a peculiar pet—a ${input4} that could speak ${input5}. One day, while wandering through the ${input1}, they stumbled upon a hidden ${input5} cave. Little did they know, this cave held the key to unlocking an ancient ${input2} treasure. Excited and curious, they ventured into the cave, where they encountered a series of ${input1} challenges. With the help of their talking ${input4}, they solved each challenge and finally reached the heart of the cave, discovering the legendary ${input2} treasure that would change their lives forever.
+    story = ` In a realm of ${input1} dreams and whimsical fantasies, two souls, ${input2} and ${input3}, collide. Their story unfolds in the ancient city of ${input5}, where ${input4} clash and passions ignite. From the depths of ${input5} to the glistening ${input5}, their love blossoms amidst the turmoil of ${input4} and the allure of ${input6}.
 `;
   } else if (Game === "Journey-of-Discovery") {
-    story = ` The name of the game is ${Game} Once upon a time, in a land of ${input1}, there lived a ${input2} ${input3}. This ${input3} had a peculiar pet—a ${input4} that could speak ${input5}. One day, while wandering through the ${input1}, they stumbled upon a hidden ${input5} cave. Little did they know, this cave held the key to unlocking an ancient ${input2} treasure. Excited and curious, they ventured into the cave, where they encountered a series of ${input1} challenges. With the help of their talking ${input4}, they solved each challenge and finally reached the heart of the cave, discovering the legendary ${input2} treasure that would change their lives forever.
+    story = `Amongst the symphony of ${input1} and the fragrance of ${input2}, a seeker of ${input3} adventures roams. This wanderer embraces the thrill of ${input4} through ${input5} and ${input5}, seeking moments of ${input6} serenity in unexpected encounters. A connoisseur of ${input5}, this traveler revels in the fusion of ${input2} and the dance of ${input1}.
 `;
   }
 
@@ -51,7 +51,7 @@ server.get("/itc505/lab7/story", (req, res) => {
 //       node server.js local
 let port = 80;
 if (process.argv[2] === "local") {
-  port = 8080;
+  port = process.env.PORT || 8080;
 }
 
 server.listen(port, () => console.log("Ready on localhost!"));
